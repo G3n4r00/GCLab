@@ -23,6 +23,6 @@ O objetivo é **analisar e corrigir problemas de memória** em uma aplicação s
 
 ## Integrantes
 
-Gabriel Dalaqua - RM551986
-Paloma Mirela - RM551321
-Victor Kenzo - RM551649 
+* Gabriel Dalaqua - RM551986
+* Paloma Mirela - RM551321
+* Victor Kenzo - RM551649 
