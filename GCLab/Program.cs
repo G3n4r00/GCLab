@@ -1,4 +1,6 @@
-﻿namespace GCLab;
+﻿using System.Runtime;
+
+namespace GCLab;
 
 class Program
 {
@@ -38,13 +40,16 @@ class Program
         publisher.Raise();
 
         // Remover referências locais (mas problemas permanecem)
-        subscriber = null;
+        subscriber.Dispose();
+        pinner.release_POH();
         publisher = null;
         pinned = null;
-        logger = null;
+        logger.Dispose();
         lohBuffer = null;
 
-        // Força coletas e verifica sobreviventes
+        // Força coletas e verifica sobreviventes;
+        GCSettings.LargeObjectHeapCompactionMode = GCLargeObjectHeapCompactionMode.CompactOnce;
+        GC.Collect(2, GCCollectionMode.Forced, blocking: true, compacting:true);
         GCHelpers.FullCollect();
         tracker.Report();
 

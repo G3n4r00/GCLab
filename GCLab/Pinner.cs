@@ -11,7 +11,12 @@ class Pinner
     public byte[] PinLongTime()
     {
         var data = new byte[256];
-        _handle = GCHandle.Alloc(data, GCHandleType.Pinned); // pin prolongado
+        _handle = GCHandle.Alloc(data, GCHandleType.Pinned);
         return data;
+    }
+
+    public void release_POH()
+    {
+        _handle.Free();
     }
 }
