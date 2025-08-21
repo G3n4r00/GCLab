@@ -19,8 +19,6 @@ O objetivo é **analisar e corrigir problemas de memória** em uma aplicação s
 
 ---
 
---
-
 ## Integrantes
 
 * Gabriel Dalaqua - RM551986
