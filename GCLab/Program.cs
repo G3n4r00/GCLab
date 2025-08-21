@@ -32,7 +32,7 @@ class Program
         Console.WriteLine($"Payload length: {payload.Length}");
 
         // 5) Recurso externo sem Dispose (usar finalizer como 'rede de segurança')
-        var logger = new Logger("log.txt");
+        using var logger = new Logger("log.txt");
         logger.WriteLines(10);
         tracker.Track("logger", logger);
 
@@ -44,7 +44,7 @@ class Program
         pinner.release_POH();
         publisher = null;
         pinned = null;
-        logger.Dispose();
+        //logger = null;
         lohBuffer = null;
 
         // Força coletas e verifica sobreviventes;
