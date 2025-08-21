@@ -18,3 +18,11 @@ O objetivo é **analisar e corrigir problemas de memória** em uma aplicação s
   - Técnicas para lidar com LOH (Large Object Heap)
 
 ---
+
+--
+
+## Integrantes
+
+Gabriel Dalaqua - RM551986
+Paloma Mirela - RM551321
+Victor Kenzo - RM551649 
